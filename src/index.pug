@@ -1,0 +1,17 @@
+extends templates/layout.pug
+block title
+	title Форма
+block content
+	header#header
+		#three.button Uncovering
+	include templates/parts/modal.pug
+	main#main.content
+	//	
+		.modal
+			.modal__background
+			.modal__content
+				#close
+				include templates/parts/form.pug
+block footer
+	footer#footer
+		p &copy; Powered by Denys Dnischenko

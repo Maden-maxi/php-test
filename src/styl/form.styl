@@ -1,0 +1,81 @@
+.material-form
+	background-color #009688
+	border-radius 3px
+	padding 20px
+	color white
+	display block
+	margin 0 auto
+
+
+.material-form--block
+	box-sizing border-box
+	position relative
+	height 57px
+	+ .material-form--block
+		margin-top 30px
+	input[type="text"], input[type="email"], input[type="password"]
+		display block
+		width 100%
+		box-sizing border-box
+		border none
+		border-bottom solid 2px white
+		background none
+		position absolute
+		bottom 0
+		font-size 24px
+		color white
+		padding 10px 0
+		cursor pointer
+		&:focus
+			cursor text
+			outline none
+			+ label
+				cursor default
+				font-size 12px
+				opacity 1
+				font-weight 900
+	label
+		cursor pointer
+		position absolute
+		top 0
+		font-weight 200
+		font-size 38px
+		letter-spacing 0.04em
+		opacity 0.4
+		transition-duration 150ms
+.hasValue + label
+	font-size 12px
+	opacity 0.7
+	font-weight 900
+//button
+.btn
+	display inline-block
+	position relative
+	padding 1em 2em
+	background-color #3498db
+	border-radius 3px
+	color #fff
+	font-family 'Roboto', sans-serif
+	cursor pointer
+	overflow hidden
+	box-shadow 0 2px 0 #2980b9
+	span
+		position relative
+		z-index 1
+
+	.circle
+		position absolute
+		z-index 0
+		background-color #2980b9
+		border-radius 50%
+		transform scale(0)
+		opacity 1
+		width 100px
+		height 100px
+		&.animate
+			animation grow .5s linear
+
+@keyframes grow
+	to
+		transform scale(2.5)
+		opacity 0
