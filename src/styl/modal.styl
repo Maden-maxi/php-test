@@ -4,13 +4,23 @@
 	left 0
 	bottom 0
 	right 0
-	background #000
-	background rgba(0, 0, 0, 0.85)
 	z-index: 3
+	display none
 	.modal__background
+		position fixed
+		top 0
+		left 0
+		bottom 0
+		right 0
+		background rgba(0, 0, 0, 0.85) url('../assets/img/cat-winter.jpg') 0 0 no-repeat
+		background-size 100% 100%
+		z-index: 3
+		cursor pointer
 	.modal__content-container
-		height 50%
-		width 50%
+		height 100%
+		width 100%
+		max-width 800px
+		max-height 400px
 		overflow auto
 		margin auto
 		position absolute
@@ -18,5 +28,29 @@
 		left 0
 		bottom 0
 		right 0
+		border-radius 5px 0 5px 5px
+		z-index 4
+		.modal__close-button-wrapper
+			position absolute
+			right 0
+			width 50px
+			height 50px
+		#modal-close
+			position absolute
+			top 15%
+			left 55%
+			color: #F44336;
+			cursor pointer
+			transition all .3s
+			&:hover
+				color #D50000
+				transform scale(1.1)
 		.modal__close-button
-		
+			font-size: 16px;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-top: 50px solid #2196F3; 
+			border-left: 50px solid transparent;

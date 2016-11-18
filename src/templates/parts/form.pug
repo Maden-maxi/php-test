@@ -1,12 +1,21 @@
 form#form.material-form(action="javascript:void(null)" name="userform" novalidate)
 	p.material-form--block
-		input(type="text", name="material-form", id="username")
-		label(for="username") Имя
+		input(type="text", name="username", id="username")
+		label(for="username")
+			i.icon-user-tie
+			span Имя
+		span.error-info
 	p.material-form--block 
-		input(type="email", name="material-form", id="email")
-		label(for="email") Email
+		input(type="email", name="email", id="email")
+		label(for="email")
+			i.icon-mail4
+			span Email
+		span.error-info
 	p.material-form--block 
-		input(type="text", name="material-form", id="tel")
-		label(for="tel") Телефон
+		input(type="text", name="tel", id="tel")
+		label(for="tel")
+			i.icon-whatsapp
+			span Телефон
+		span.error-info
 	p.material-form--block
-		button(type="submit").btn Отправить
+		button#submit(type="submit").btn Отправить

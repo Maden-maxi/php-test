@@ -1,17 +1,22 @@
 extends templates/layout.pug
 block title
-	title Форма
+	title Тестовое задание
 block content
 	header#header
-		#three.button Uncovering
-	include templates/parts/modal.pug
+		.container
+			h1 Тестовое задание
 	main#main.content
-	//	
-		.modal
-			.modal__background
-			.modal__content
-				#close
-				include templates/parts/form.pug
+		.container
+			article
+				p На єтой странице присутствуют все 3 задания из форми <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0AZCHwUgdf6ATVMi2FAMgXB92zlxtIJuN5hciKR-0sUaRjA/viewform"><strong>"Обучение и стажировка - php developer"</strong></a>.
+				h3 Список заданий
+				ol
+					li PHP - Задача php + ajax + jquery
+					li HTML - Задача 1. Прижатий футер
+					li HTML - Задача 2. Модальное окно с фоновим изображением
+			#modap-open.btn Форма
+	include templates/parts/modal.pug
 block footer
 	footer#footer
-		p &copy; Powered by Denys Dnischenko
+		.container
+			p!= '<a href="https://github.com/Maden-maxi"><i class="icon-github"></i></a>' 

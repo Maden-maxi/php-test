@@ -36,14 +36,40 @@
 			});
 		}
 	};
-	$('.button').click(function(){
-		var buttonId = $(this).attr('id');
-		$('#modal-container').removeAttr('class').addClass(buttonId);
-		$('body').addClass('modal-active');
-	})
+	//modal
+	$(document).on('click', '#modap-open', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		$('#modal-container').fadeIn('1000');
+	});
+	$(document).on('click', '.modal__background, #modal-close', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		$('#modal-container').fadeOut('1000');
+	});
+	//form
+	$(document).on('click', '#submit', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		$('#form').submit();
+	});
 
-	$('.btn').click(function(){
-		$('#modal-container').addClass('out');
-		$('body').removeClass('modal-active');
+	$(document).on('submit', '#form', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		var data = $(this).serialize();
+		$.ajax({
+			url: 'form.php',
+			type: 'POST',
+			data: data,
+			success: function (data, textStatus, xhr) {
+				console.log(data);
+				alert('success')
+			},
+			error: function (xhr, textStatus, errorThrown) {
+				console.log(xhr);
+				alert('error');
+			}
+		});
 	});
 })(jQuery)
