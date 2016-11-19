@@ -30,6 +30,11 @@ gulp.task('assets', () => {
 		.pipe(gulp.dest('dist/assets'));
 });
 
+gulp.task('php', () => {
+	return gulp.src('src/*.php')
+		.pipe(gulp.dest('dist'));
+});
+
 gulp.task('styl',  () => {
 	return gulp.src('src/styl/style.styl')
 		.pipe($.sourcemaps.init())
@@ -88,5 +93,5 @@ gulp.task('dev', () => {
 });
 
 gulp.task('dist', cb => {
-	sequence( 'clean', 'pug', 'styl', 'js' , 'bower', 'assets','html', cb);
+	sequence( 'clean', 'pug', 'styl', 'js' , 'bower', 'assets', 'php','html', cb);
 });
