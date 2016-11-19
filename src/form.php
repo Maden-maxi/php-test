@@ -67,10 +67,11 @@ class Validator
 			if( $value == '' ) {
 				$this->errorStatus = 'empty';
 				$this->errorMsg = 'Поле пустое,заполните пожалуйста поле';
-			}elseif ( strlen( $value ) < $min ) {
+
+			}elseif ( mb_strlen( $value ) < $min ) {
 				$this->errorStatus = 'few chars';
 				$this->errorMsg = 'Имя слишком короткое';
-			}elseif ( strlen( $value ) > $max ) {
+			}elseif ( mb_strlen( $value ) > $max ) {
 				$this->errorStatus = 'many chars';
 				$this->errorMsg = 'Имя слишком длинное';
 			}else{
