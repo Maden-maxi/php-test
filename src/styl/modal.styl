@@ -1,4 +1,4 @@
-#modal-container.modal
+#modal-container.modal,#success-notify.modal
 	position fixed
 	top 0
 	left 0
@@ -54,3 +54,11 @@
 			height: 0;
 			border-top: 50px solid #2196F3; 
 			border-left: 50px solid transparent;
+#success-notify.modal
+	z-index 4
+	.modal__content-container
+		border-radius: 5px 5px 5px 5px;
+		max-width: 300px
+		max-height: 68px
+		padding: 20px
+		background-color: #00E676;

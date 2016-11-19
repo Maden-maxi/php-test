@@ -91,3 +91,26 @@
 	to
 		transform scale(2.5)
 		opacity 0
+.hidden
+	display none !important
+.spin
+	animation spin 1.25s linear infinite
+	&-wrapper
+		position relative
+		display inline-block
+		margin-left 25px
+		height 100%
+		i
+			position absolute
+			top 60%
+			display inline-block
+			font-size 36px
+@keyframes spin
+	to
+		transform rotate(360deg)
+@media screen and (max-width: 768px)
+	.error-info
+		font-size: 14px
+@media screen and (max-width: 600px)
+	.error-info
+		font-size: 10px
